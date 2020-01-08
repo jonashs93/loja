@@ -1,0 +1,2 @@
+class ProdutoCor < ApplicationRecord
+end
