@@ -1,24 +1,48 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto com Rails 6 utilizando bootstrapp e cocoon para implementação de nested forms
 
-Things you may want to cover:
+# Loja
 
-* Ruby version
+### Dependências
+------------
 
-* System dependencies
+- Ruby version 2.5.0+
+- Rails 6.0.0+
 
-* Configuration
+### Instalação
+------------
 
-* Database creation
+Instale as gems
 
-* Database initialization
+`bundle install`
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+Crie o banco de dados e importe os dados
 
-* Deployment instructions
+`bundle exec rake db:setup`
 
-* ...
+
+Instale as dependências do javascript
+
+`yarn install`
+
+
+### Execução
+------------
+
+Inicie o servidor
+
+`rails s`
+
+A aplicação ficará disponível em
+
+http://localhost:3000
+
+
+### Teste
+------------
+
+Para executar os testes
+
+`bundle exec rspec`
