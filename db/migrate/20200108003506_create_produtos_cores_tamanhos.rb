@@ -3,6 +3,7 @@ class CreateProdutosCoresTamanhos < ActiveRecord::Migration[6.0]
     create_table :produtos_cores_tamanhos do |t|
       t.references :produto_cor, foreign_key: true
       t.references :tamanho, foreign_key: true
+      t.integer    :quantidade
       t.timestamps
     end
   end

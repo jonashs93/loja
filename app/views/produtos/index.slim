@@ -1,0 +1,22 @@
+.row
+  .col
+    h1 Camisas
+  .col
+    br
+    a.float-right href=new_resource_path Nova Camisa
+
+.row
+  table.table.table-hover
+    thead.thead-dark
+      tr.text-center
+        th Nome
+        th Ação
+    tbody
+      - collection.each do |item|
+        tr
+          td.col-11= item.nome
+          td.col-1.text-center
+            = link_to edit_resource_path(item), class: 'btn btn-primary' do
+              = fa_icon 'edit'
+            = link_to resource_path(item), method: :delete, class: 'btn btn-danger' do
+              = fa_icon 'trash'

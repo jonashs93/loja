@@ -1,0 +1,17 @@
+.nested-fields
+  .row
+    .col-11
+      = f.association :cor
+    .col-1
+      br
+      = link_to_remove_association '', f, class: 'btn btn-danger fa fa-trash'
+
+  .card
+    h5.card-header Tamanhos
+    .card-body
+      #tamanhos
+        = f.simple_fields_for :produtos_cores_tamanhos do |tamanho|
+          = render 'produto_cor_tamanho_fields', f: tamanho
+        .links
+          = link_to_add_association 'Adicionar Tamanho', f, :produtos_cores_tamanhos
+  br

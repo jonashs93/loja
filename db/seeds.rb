@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Cor.create!([
+  {nome: 'Amarelo'},
+  {nome: 'Azul'},
+  {nome: 'Branco'},
+  {nome: 'Preto'},
+  {nome: 'Rosa'},
+  {nome: 'Verde'}
+])
+
+Tamanho.create!([
+  {nome: 'P'},
+  {nome: 'M'},
+  {nome: 'G'},
+  {nome: 'GG'}
+])

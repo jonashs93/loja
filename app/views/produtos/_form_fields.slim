@@ -1,0 +1,16 @@
+= simple_form_for resource do |f|
+  = f.input :nome
+  = f.input :descricao
+
+
+  .card
+    h5.card-header Cores
+    .card-body
+      #cores
+        = f.simple_fields_for :produtos_cores do |cor|
+          = render 'produto_cor_fields', f: cor
+        .links
+          = link_to_add_association 'Adicionar Cor', f, :produtos_cores
+  br
+  = f.button :submit, class: 'btn-primary'
+  = link_to 'Sair', collection_path, class: 'btn btn-secondary float-right'

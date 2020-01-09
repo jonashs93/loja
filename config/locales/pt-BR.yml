@@ -1,0 +1,15 @@
+pt-BR:
+  helpers:
+    submit:
+      create: Criar %{model}
+      update: Atualizar %{model}
+
+  errors:
+    messages:
+      blank: não pode ficar em branco
+      required: não pode ficar em branco
+
+  activerecord:
+    attributes:
+      produto:
+        descricao: Descrição

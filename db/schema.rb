@@ -18,16 +18,6 @@ ActiveRecord::Schema.define(version: 2020_01_08_003506) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "produto_cores", force: :cascade do |t|
-    t.integer "produto_id"
-    t.integer "cor_id"
-    t.integer "quantidade"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["cor_id"], name: "index_produto_cores_on_cor_id"
-    t.index ["produto_id"], name: "index_produto_cores_on_produto_id"
-  end
-
   create_table "produtos", force: :cascade do |t|
     t.string "nome", limit: 100
     t.text "descricao"
@@ -35,9 +25,19 @@ ActiveRecord::Schema.define(version: 2020_01_08_003506) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "produtos_cores", force: :cascade do |t|
+    t.integer "produto_id"
+    t.integer "cor_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cor_id"], name: "index_produtos_cores_on_cor_id"
+    t.index ["produto_id"], name: "index_produtos_cores_on_produto_id"
+  end
+
   create_table "produtos_cores_tamanhos", force: :cascade do |t|
     t.integer "produto_cor_id"
     t.integer "tamanho_id"
+    t.integer "quantidade"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["produto_cor_id"], name: "index_produtos_cores_tamanhos_on_produto_cor_id"
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 2020_01_08_003506) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "produto_cores", "cores"
-  add_foreign_key "produto_cores", "produtos"
+  add_foreign_key "produtos_cores", "cores"
+  add_foreign_key "produtos_cores", "produtos"
   add_foreign_key "produtos_cores_tamanhos", "produtos_cores"
   add_foreign_key "produtos_cores_tamanhos", "tamanhos"
 end

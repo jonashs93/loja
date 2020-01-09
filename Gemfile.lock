@@ -72,14 +72,25 @@ GEM
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
     childprocess (3.0.0)
+    cocoon (1.2.14)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
     erubi (1.9.0)
     ffi (1.11.3)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    has_scope (0.7.2)
+      actionpack (>= 4.1)
+      activesupport (>= 4.1)
     i18n (1.7.1)
       concurrent-ruby (~> 1.0)
+    inherited_resources (1.11.0)
+      actionpack (>= 5.0, < 6.1)
+      has_scope (~> 0.6)
+      railties (>= 5.0, < 6.1)
+      responders (>= 2, < 4)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
     listen (3.1.5)
@@ -141,6 +152,9 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.6.0)
+    responders (3.0.0)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     ruby_dep (1.5.0)
     rubyzip (2.0.0)
     sass-rails (6.0.0)
@@ -159,6 +173,9 @@ GEM
     simple_form (4.0.1)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
+    slim (4.0.1)
+      temple (>= 0.7.6, < 0.9)
+      tilt (>= 2.0.6, < 2.1)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -171,6 +188,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    temple (0.8.1)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -206,6 +224,9 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  cocoon
+  font-awesome-rails
+  inherited_resources
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   puma (~> 4.1)
@@ -213,6 +234,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   simple_form
+  slim
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)

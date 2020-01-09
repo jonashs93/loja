@@ -1,0 +1,9 @@
+.nested-fields
+  .row
+    .col-9
+      = f.association :tamanho
+    .col-2
+      = f.input :quantidade
+    .col-1
+      br
+      = link_to_remove_association '', f, class: 'btn btn-danger fa fa-trash'
